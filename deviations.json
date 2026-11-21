@@ -1,0 +1,16 @@
+[
+  {
+    "id": "DEV1",
+    "date": "2026-11-17",
+    "what": "No preregistration (project instruction asked for one)",
+    "why": "Author decision D9: fsai-open is a builders' solution, not a study",
+    "decided_by": "Author"
+  },
+  {
+    "id": "DEV2",
+    "date": "2026-11-17",
+    "what": "Handshake timeout 50 ms instead of the 100 ms in ADS-DV spec v4.0 section 2.4",
+    "why": "IMechE 2026 FS-AI Rules T1.1.8 (decision D12)",
+    "decided_by": "Author supplied the rules"
+  }
+]

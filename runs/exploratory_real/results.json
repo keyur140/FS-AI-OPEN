@@ -1,0 +1,271 @@
+{
+ "what": "Exploratory: built-in LiDAR cone detector (shipped settings, no tuning) on real labelled LiDAR scans, and the same measure on fsai-open's simulated scans",
+ "scene": {
+  "file": "cfs_vargarda8.zip",
+  "sha256": "650ff7ecaa31a6927d39ca944946c4f601bc57893a67ee58c438b34a70f6ed89",
+  "frames": 63,
+  "metadata_info": {
+   "tool": "generate_scene.py",
+   "version": "0.2",
+   "description": "Generated from MCAP file",
+   "generated_on": "2024-03-22 11:21:49",
+   "last_updated": "2024-03-22 11:21:49",
+   "source": "vargarda8_mixed_2023-07-27-17-22-00_0.mcap"
+  },
+  "source": "coneScenes (Chalmers Formula Student)"
+ },
+ "method": {
+  "match_within_m": 0.5,
+  "ego_radius_m": 1.5,
+  "headline_max_range_m": 20.0,
+  "label_rule": "labels with at least one LiDAR point in their 0.46 m footprint",
+  "views": "all around (360 deg) and front only (+-80 deg, like the stack's field of view)"
+ },
+ "real": {
+  "all_around": {
+   "summary": {
+    "labelled_cones": 2042,
+    "found": 1388,
+    "false_cones": 64,
+    "recall": 0.68,
+    "precision": 0.956,
+    "mean_position_error_m": 0.082,
+    "big_cones_labelled": 0,
+    "big_cones_called_big": 0
+   },
+   "by_range": [
+    {
+     "range_m": "0-5",
+     "labelled_cones": 243,
+     "found": 236,
+     "false_cones": 0,
+     "recall": 0.971,
+     "precision": 1.0,
+     "mean_position_error_m": 0.066
+    },
+    {
+     "range_m": "5-10",
+     "labelled_cones": 293,
+     "found": 291,
+     "false_cones": 0,
+     "recall": 0.993,
+     "precision": 1.0,
+     "mean_position_error_m": 0.065
+    },
+    {
+     "range_m": "10-15",
+     "labelled_cones": 634,
+     "found": 510,
+     "false_cones": 16,
+     "recall": 0.804,
+     "precision": 0.97,
+     "mean_position_error_m": 0.086
+    },
+    {
+     "range_m": "15-20",
+     "labelled_cones": 872,
+     "found": 351,
+     "false_cones": 48,
+     "recall": 0.403,
+     "precision": 0.88,
+     "mean_position_error_m": 0.102
+    },
+    {
+     "range_m": "20-30",
+     "labelled_cones": 898,
+     "found": 55,
+     "false_cones": 58,
+     "recall": 0.061,
+     "precision": 0.487,
+     "mean_position_error_m": 0.12
+    }
+   ]
+  },
+  "front_80deg": {
+   "summary": {
+    "labelled_cones": 1390,
+    "found": 1047,
+    "false_cones": 57,
+    "recall": 0.753,
+    "precision": 0.948,
+    "mean_position_error_m": 0.081,
+    "big_cones_labelled": 0,
+    "big_cones_called_big": 0
+   },
+   "by_range": [
+    {
+     "range_m": "0-5",
+     "labelled_cones": 213,
+     "found": 209,
+     "false_cones": 2,
+     "recall": 0.981,
+     "precision": 0.991,
+     "mean_position_error_m": 0.067
+    },
+    {
+     "range_m": "5-10",
+     "labelled_cones": 282,
+     "found": 280,
+     "false_cones": 1,
+     "recall": 0.993,
+     "precision": 0.996,
+     "mean_position_error_m": 0.066
+    },
+    {
+     "range_m": "10-15",
+     "labelled_cones": 386,
+     "found": 330,
+     "false_cones": 8,
+     "recall": 0.855,
+     "precision": 0.976,
+     "mean_position_error_m": 0.086
+    },
+    {
+     "range_m": "15-20",
+     "labelled_cones": 509,
+     "found": 228,
+     "false_cones": 46,
+     "recall": 0.448,
+     "precision": 0.832,
+     "mean_position_error_m": 0.106
+    },
+    {
+     "range_m": "20-30",
+     "labelled_cones": 566,
+     "found": 48,
+     "false_cones": 52,
+     "recall": 0.085,
+     "precision": 0.48,
+     "mean_position_error_m": 0.125
+    }
+   ]
+  }
+ },
+ "synthetic": {
+  "all_around": {
+   "summary": {
+    "labelled_cones": 725,
+    "found": 677,
+    "false_cones": 0,
+    "recall": 0.934,
+    "precision": 1.0,
+    "mean_position_error_m": 0.017,
+    "big_cones_labelled": 16,
+    "big_cones_called_big": 16
+   },
+   "by_range": [
+    {
+     "range_m": "0-5",
+     "labelled_cones": 188,
+     "found": 173,
+     "false_cones": 0,
+     "recall": 0.92,
+     "precision": 1.0,
+     "mean_position_error_m": 0.016
+    },
+    {
+     "range_m": "5-10",
+     "labelled_cones": 185,
+     "found": 184,
+     "false_cones": 0,
+     "recall": 0.995,
+     "precision": 1.0,
+     "mean_position_error_m": 0.016
+    },
+    {
+     "range_m": "10-15",
+     "labelled_cones": 180,
+     "found": 170,
+     "false_cones": 0,
+     "recall": 0.944,
+     "precision": 1.0,
+     "mean_position_error_m": 0.018
+    },
+    {
+     "range_m": "15-20",
+     "labelled_cones": 172,
+     "found": 150,
+     "false_cones": 0,
+     "recall": 0.872,
+     "precision": 1.0,
+     "mean_position_error_m": 0.02
+    },
+    {
+     "range_m": "20-30",
+     "labelled_cones": 354,
+     "found": 235,
+     "false_cones": 0,
+     "recall": 0.664,
+     "precision": 1.0,
+     "mean_position_error_m": 0.018
+    }
+   ],
+   "frames": 60
+  },
+  "front_80deg": {
+   "summary": {
+    "labelled_cones": 706,
+    "found": 669,
+    "false_cones": 0,
+    "recall": 0.948,
+    "precision": 1.0,
+    "mean_position_error_m": 0.017,
+    "big_cones_labelled": 16,
+    "big_cones_called_big": 16
+   },
+   "by_range": [
+    {
+     "range_m": "0-5",
+     "labelled_cones": 169,
+     "found": 165,
+     "false_cones": 0,
+     "recall": 0.976,
+     "precision": 1.0,
+     "mean_position_error_m": 0.014
+    },
+    {
+     "range_m": "5-10",
+     "labelled_cones": 185,
+     "found": 184,
+     "false_cones": 0,
+     "recall": 0.995,
+     "precision": 1.0,
+     "mean_position_error_m": 0.016
+    },
+    {
+     "range_m": "10-15",
+     "labelled_cones": 180,
+     "found": 170,
+     "false_cones": 0,
+     "recall": 0.944,
+     "precision": 1.0,
+     "mean_position_error_m": 0.018
+    },
+    {
+     "range_m": "15-20",
+     "labelled_cones": 172,
+     "found": 150,
+     "false_cones": 0,
+     "recall": 0.872,
+     "precision": 1.0,
+     "mean_position_error_m": 0.02
+    },
+    {
+     "range_m": "20-30",
+     "labelled_cones": 354,
+     "found": 235,
+     "false_cones": 0,
+     "recall": 0.664,
+     "precision": 1.0,
+     "mean_position_error_m": 0.018
+    }
+   ],
+   "frames": 60
+  }
+ },
+ "input_file_sha256": "fe949f135d7e97079618090cdf5121c7a93b6da60685fd3c0a160068dfcaf8e9",
+ "environment": {
+  "python": "3.13.18",
+  "numpy": "2.2.6"
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "event": "acceleration",
+ "seed": 0,
+ "track_length_m": 179.0,
+ "final_state": "AS_FINISHED",
+ "faults": [],
+ "lap_marks_referee_s": [
+  0.62,
+  9.02
+ ],
+ "lap_times_referee_s": [
+  8.4
+ ],
+ "cones_hit": 0,
+ "off_track_s": 0.0,
+ "max_lateral_m": 0.253,
+ "max_speed_mps": 14.011,
+ "map_true_cones": null,
+ "map_false_cones": null,
+ "map_colour_accuracy": null,
+ "map_rmse_m": null,
+ "bridge_violations": [],
+ "trace_sha256": "n/a (real-time run)",
+ "note": "ROS 2 real-time run: bridge, emulator, sensors and stack as separate processes over CAN (sim bus).",
+ "ok": true
+}

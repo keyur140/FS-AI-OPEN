@@ -1,0 +1,138 @@
+# fsai-open: driving-stack settings (stage 2), one reason per value
+# Author: KEYUR SHAILESHKUMAR PATEL (ORCID https://orcid.org/0009-0008-5261-043X)
+# Affiliations: (1) MSc Artificial Intelligence student, Department of Computer Science,
+#   Brunel University London, UK; (2) Independent researcher
+# Conducted independently; not an official Brunel University London project.
+# Drafted with an AI assistant (Claude, Anthropic); design decisions by the author.
+#
+# Plain words: the knobs of the driving software. "status: tune" means the value is a starting point
+# chosen for the desk simulator and the team should tune it on the real car. Sensor models describe
+# the PRETEND sensors in the simulator; the team's real sensors replace them through the same inputs.
+
+sensors:                       # mounting in the vehicle frame: x forward from the rear axle, y left, z up
+  lidar_x_m:          {value: 1.70,  source: "choice: front-mounted, about at the nose", status: tune}
+  lidar_z_m:          {value: 0.25,  source: "choice: low mount sees cones under each other", status: tune}
+  lidar_channels:     {value: 64,    source: "choice: generic 64-channel spinning LiDAR"}
+  lidar_vfov_deg:     {value: [-16.0, 15.0], source: "choice: generic 64-channel LiDAR, about 0.5 deg between channels"}
+  lidar_hres_deg:     {value: 0.1,   source: "choice: 3600 points per channel per turn"}
+  lidar_hfov_deg:     {value: 180.0, source: "choice: the car body blocks the rear half for a nose mount"}
+  lidar_range_m:      {value: 40.0,  source: "choice"}
+  lidar_noise_m:      {value: 0.02,  source: "choice: typical spinning LiDAR range noise"}
+  lidar_dropout:      {value: 0.05,  source: "choice: share of returns lost"}
+  lidar_hz:           {value: 10,    source: "choice: typical spin rate"}
+  camera_x_m:         {value: 0.60,  source: "choice: main hoop area", status: tune}
+  camera_hfov_deg:    {value: 100.0, source: "choice"}
+  camera_range_m:     {value: 22.0,  source: "choice: where cone colour is still reliable"}
+  camera_bearing_noise_deg: {value: 0.3, source: "choice"}
+  camera_range_noise_frac:  {value: 0.04, source: "choice: monocular depth error grows with distance"}
+  camera_miss_near:   {value: 0.02,  source: "choice: miss probability at 0 m"}
+  camera_miss_far:    {value: 0.30,  source: "choice: miss probability at max range"}
+  camera_colour_error_near: {value: 0.01, source: "choice"}
+  camera_colour_error_far:  {value: 0.12, source: "choice"}
+  camera_false_per_frame:   {value: 0.3, source: "choice: mean false detections per frame (Poisson)"}
+  camera_hz:          {value: 20,    source: "choice"}
+  imu_yaw_rate_noise_dps: {value: 0.3, source: "choice"}
+  imu_yaw_rate_bias_dps:  {value: 0.2, source: "choice: constant bias the SLAM must tolerate"}
+  wheel_speed_noise_frac: {value: 0.01, source: "choice"}
+  clutter_level:      {value: 0.0,   source: "choice: 0 = clean desk track; 1 = trackside clutter (barriers, people, photographers, grass patches) and heat shimmer; stress runs use 1"}
+  shimmer_per_scan:   {value: 60,    source: "choice: spurious low returns per scan at clutter_level 1 (heat shimmer, dust, spray)"}
+  camera_clutter_as_cone: {value: 0.15, source: "choice: chance per frame that the camera calls a visible person or barrier post a cone (clutter_level 1)"}
+
+perception:
+  max_scan_age_s:     {value: 0.4,   source: "choice: a scan older than this when it is processed is dropped, never used as if it were new. On a symmetric layout (the skidpad rings) an old scan matches the wrong cones and turns the map. The console health line shows scan ages", status: tune}
+  ground_tolerance_m: {value: 0.08,  source: "choice: about 4 x LiDAR range noise; points within this of the ground plane are ground"}
+  cluster_radius_m:   {value: 0.20,  source: "choice: points closer than this belong to the same object"}
+  cone_max_width_m:   {value: 0.45,  source: "DS26 big cone base 285 mm plus margin"}
+  cone_min_height_m:  {value: 0.12,  source: "choice"}
+  cone_max_height_m:  {value: 0.56,  source: "DS26 big cone 505 mm plus 55 mm; taller blobs are barriers or people seen by only their lower beams", status: tune}
+  big_cone_height_m:  {value: 0.40,  source: "between small (325 mm) and big (505 mm) cone heights, DS26"}
+  min_points:         {value: 3,     source: "choice"}
+  cone_min_height_near_m: {value: 0.20, source: "choice: within near_range_m the LiDAR sees the top of a 325 mm cone, so lower blobs (grass, kerbs, heat shimmer) are not cones", status: tune}
+  near_range_m:       {value: 12.0,  source: "choice: about 0.1 m between channels at this range", status: tune}
+  isolation_m:        {value: 0.55,  source: "choice: a cone stands alone; other raised points this close mean grass, a barrier or a person", status: tune}
+  isolation_max_points: {value: 2,   source: "choice: raised voxels allowed in the isolation ring", status: tune}
+  fusion_gate_m:      {value: 0.6,   source: "choice: camera and LiDAR cone within this are the same cone"}
+  fusion_gate_per_m:  {value: 0.04,  source: "choice: gate grows with distance"}
+  confirm_with_camera: {value: true, source: "choice: while the camera is working, a LiDAR blob inside camera range counts as a cone only if the camera also sees a cone there (grass, kerbs). With no camera detections for 1 s, LiDAR-only mode takes over"}
+  camera_alive_s:     {value: 1.0,   source: "choice: camera counts as working if it reported a cone within this time"}
+
+slam:
+  max_landmark_range_m:  {value: 25.0, source: "choice"}
+  obs_sigma_m:           {value: 0.10, source: "choice"}
+  obs_sigma_per_m:       {value: 0.012, source: "choice"}
+  speed_sigma_frac:      {value: 0.03, source: "choice"}
+  yaw_rate_sigma_dps:    {value: 1.0,  source: "choice"}
+  gate_chi2:             {value: 9.21, source: "chi-square, 2 dof, 99 %"}
+  max_match_m:           {value: 1.0,  source: "choice: a detection is never matched to a mapped cone further away than this (cones along an edge stand 2.5 m or more apart); widened while re-finding the map"}
+  new_landmark_chi2:     {value: 30.0, source: "choice: farther than this from every landmark = new cone"}
+  min_landmark_spacing_m: {value: 0.8, source: "choice: big orange cones at a timing line stand 1 m apart"}
+  prune_after_seen:      {value: 6,    source: "choice: candidate landmarks checked after this many chances"}
+  prune_ratio:           {value: 0.35, source: "choice: keep only if seen in at least this share of chances"}
+  bias_estimation:       {value: true, source: "choice: estimate the yaw-rate bias as a state"}
+  rear_slip_gain:        {value: 0.0065, source: "estimate: m * lf / (L * rear cornering stiffness) with the ads_dv.yaml tyre estimates; calibrate from a logged steady circle", status: tune}
+  slip_estimation:       {value: true, source: "choice: learn the slip gain while driving (state of the filter), so cold tyres or a damp track do not smear the map"}
+  slip_sigma:            {value: 0.004, source: "choice: starting uncertainty of the slip gain (about 60 % of its value)"}
+  slip_walk_per_s:       {value: 0.0002, source: "choice: how fast the slip gain may drift (tyre warm-up)"}
+  lateral_sigma_mps:     {value: 0.03, source: "choice: side-slip noise floor"}
+  lateral_sigma_frac:    {value: 0.5,  source: "choice: side-slip model is trusted to 50 %"}
+
+planner:
+  horizon_m:          {value: 22.0,  source: "choice"}
+  min_gate_m:         {value: 2.2,   source: "choice: blue-yellow pairs narrower than this are not a gate"}
+  max_gate_m:         {value: 6.5,   source: "choice"}
+  beam_width:         {value: 6,     source: "choice"}
+  beam_depth:         {value: 8,     source: "choice"}
+  max_turn_deg:       {value: 55.0,  source: "choice: largest heading change between path points"}
+  racing_margin_m:    {value: 1.25,  source: "choice: half car width (0.715 m, SPEC26) + cone radius (0.114 m) + 0.42 m tracking allowance; 0 cones hit on the test tracks", status: tune}
+  racing_iterations:  {value: 3,     source: "choice"}
+
+speed:
+  explore_mps:        {value: 8.0,   source: "choice: first lap while the map is built", status: tune}
+  max_mps:            {value: 18.0,  source: "choice", status: tune}
+  a_lat_mps2:         {value: 6.0,   source: "choice", status: tune}
+  a_long_mps2:        {value: 3.0,   source: "choice: about the 195 Nm torque limit on 300 kg", status: tune}
+  a_brake_mps2:       {value: 5.0,   source: "choice", status: tune}
+  grip_factor:        {value: 1.0,   source: "choice: on-site knob, scales a_lat, a_long and a_brake together (cold tyres or damp track: 0.8)", status: tune}
+  grip_adapt:         {value: true,  source: "choice: lower the speeds if the car turns less than asked (understeer seen in yaw rate vs steering)"}
+  grip_ratio_min:     {value: 0.85,  source: "choice: below this share of the expected yaw rate, slow the racing line down"}
+  skidpad_mps:        {value: 6.5,   source: "choice: below sqrt(a_lat * 9.125 m)", status: tune}
+  accel_brake_mps2:   {value: 6.0,   source: "choice: stop well inside the stop area", status: tune}
+
+control:
+  lateral:            {value: pure_pursuit, source: "choice: pure_pursuit, feedforward or stanley"}
+  lookahead_min_m:    {value: 2.0,   source: "choice: tuned on trackdrive seeds 1, 3, 5, 6 (0 cones hit)", status: tune}
+  lookahead_gain_s:   {value: 0.25,  source: "choice: lookahead grows with speed; larger values cut tight corners", status: tune}
+  lookahead_max_m:    {value: 9.0,   source: "choice", status: tune}
+  stanley_k:          {value: 1.5,   source: "choice", status: tune}
+  ff_distance_m:      {value: 4.0,   source: "choice: feedforward controller settles path errors over about this distance", status: tune}
+  ff_damping:         {value: 0.8,   source: "choice: damping ratio of the feedforward controller", status: tune}
+  preview_s:          {value: 0.15,  source: "choice: look this far ahead for path curvature (steering actuator lag)", status: tune}
+  steer_smoothing:    {value: 0.5,   source: "choice: low-pass on steering command", status: tune}
+  steer_gain_adapt:   {value: true,  source: "choice: if the car turns less than asked in gentle corners (steering compliance, bumps), ask for proportionally more steering; measured from yaw rate"}
+  steer_gain_lat_max_mps2: {value: 3.0, source: "choice: only corners gentler than this teach the steering gain (harder ones mix in tyre grip)"}
+  latency_comp_s:     {value: 0.06,  source: "choice: steer from where the car will be this long from now (actuator dead time 0.04 s + smoothing); measure on day 1, see guide", status: tune}
+
+mission:
+  stop_speed_mps:     {value: 0.3,   source: "choice: below this the mission asks the bridge to finish"}
+  stop_target_frac:   {value: 0.6,   source: "choice: after the finish line, plan to stop in this share of the allowed distance (FSAI26 D6.3.7, D8.2.7: 30 m; D4.3.6: 25 m)"}
+  stop_decel_max_mps2: {value: 8.0,  source: "choice: firmest planned stop; brake_decel_at_100pct is 9 m/s2 (estimate)"}
+  steer_sweep_dps:    {value: 20.0,  source: "choice: steering sweep speed for the inspection and demo missions (actuator estimate 60 deg/s)"}
+  inspect_a_rpm:      {value: 200.0, source: "FSAI26 IN2.2.2: Static Inspection A ramps the drivetrain to 200 rpm"}
+  inspect_a_ramp_s:   {value: 10.0,  source: "FSAI26 IN2.2.2: ... in 10 seconds"}
+  inspect_a_stop_s:   {value: 5.0,   source: "FSAI26 IN2.2.2: ... and then stops within 5 seconds"}
+  inspect_b_rpm:      {value: 50.0,  source: "FSAI26 IN2.2.2: Static Inspection B spins up to 50 rpm, then triggers the EBS"}
+  rpm_basis:          {value: wheel, source: "ASSUMPTION: the rules say drivetrain rpm; we use the wheel rpm the VCU reports (VCU2AI_Speeds). Set to motor to use motor rpm (wheel rpm x belt_ratio)", status: confirm}
+  demo_leg_m:         {value: 10.0,  source: "FSAI26 IN2.3.2: accelerate at least 10 m, stop within a further 10 m, accelerate a further 10 m, then EBS"}
+  demo_leg_margin_m:  {value: 1.5,   source: "choice: drive this much past each 10 m minimum"}
+  demo_speed_mps:     {value: 4.0,   source: "choice: demo top speed, so the 10 m stop is easy (4 m/s needs 1.3 m at 6 m/s2)"}
+
+watchdog:
+  perception_timeout_s: {value: 1.0, source: "choice: FSAI26 T4.2.2 - request the EBS if a sensor signal is lost; 10 missed LiDAR scans. The planned path reaches 22 m ahead, so 1 s at 10 m/s stays on a known path. 0.5 s tripped on a busy desk computer", status: tune}
+  imu_timeout_s:      {value: 0.5,   source: "choice: FSAI26 T4.2.2; checked only once an IMU has been seen. 0.2 s tripped on ROS executor hiccups in desk runs; 0.5 s is still 5 m at 10 m/s", status: tune}
+  odometry_timeout_s: {value: 0.5,   source: "choice: FSAI26 T4.2.2; wheel speeds come from the VCU every 10 ms", status: tune}
+  lost_match_s:       {value: 2.0,   source: "choice: moving, seeing cones, but none of them matches the map for this long = the car is lost; stop with the EBS"}
+  relocalise_after_s: {value: 0.3,   source: "choice: on a frozen map, no cone matched for this long -> widen the pose search (repeated every interval) before the lost-match EBS. Added after a real-time trackdrive lost the map in lap 8 with no way back"}
+  relocalise_pos_sigma_m:   {value: 0.4, source: "choice: extra position uncertainty per widening (about the largest real-time pose error seen, 0.7 m)"}
+  relocalise_yaw_sigma_deg: {value: 3.0, source: "choice: extra heading uncertainty per widening"}
+  relocalise_max_steps: {value: 3,   source: "choice: at most this many widenings per lost spell, then the lost-match EBS decides. Wider searches can match the wrong cones; stopping is safer than driving on a wrong map"}
+  grace_s:            {value: 1.0,   source: "choice: after Go, sensors have this long to start reporting"}

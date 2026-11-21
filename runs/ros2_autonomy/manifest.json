@@ -1,0 +1,134 @@
+{
+ "ai_assistance": "Code and documents were drafted with an AI assistant (Claude, by Anthropic). Every design decision was made and approved by the author; every result comes from deterministic code and tests that anyone can re-run.",
+ "author": {
+  "affiliations": [
+   "MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK",
+   "Independent researcher"
+  ],
+  "family_names": "PATEL",
+  "given_names": "KEYUR SHAILESHKUMAR",
+  "name": "KEYUR SHAILESHKUMAR PATEL",
+  "note": "Conducted independently; not an official Brunel University London project.",
+  "orcid": "https://orcid.org/0009-0008-5261-043X"
+ },
+ "environment": {
+  "machine": "x86_64",
+  "packages": {
+   "can": "4.6.1",
+   "cantools": "45.2.0",
+   "msgpack": "1.2.4",
+   "pytest": "9.1.1",
+   "yaml": "6.0.3"
+  },
+  "platform": "Linux-6.18.44-fc-v595-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "ros_distro": "humble"
+ },
+ "evidence_level": "Synthetic-validated",
+ "inputs": {
+  "params": {
+   "path": "config/ads_dv.yaml",
+   "sha256": "5016602c88ed2028cc39a9a8b161f9a1515436b67eed3561e8c4c408024e9f1c"
+  }
+ },
+ "notes": "Produced inside the fsai-open Docker image by ./run.sh demo <event> <seed>",
+ "outputs": {
+  "replay_acceleration_0.html": {
+   "path": "runs/ros2_autonomy/replay_acceleration_0.html",
+   "sha256": "97a240190debf0c5b37a08cc8f5e19f2af8d0dc8067b5a8c1ad6d3275757b08c"
+  },
+  "replay_autocross_1_clutter.html": {
+   "path": "runs/ros2_autonomy/replay_autocross_1_clutter.html",
+   "sha256": "2021327a93f4b1458aa50f331a75b98f0608b575baa98b3a8d18c476c7611841"
+  },
+  "replay_autocross_4.html": {
+   "path": "runs/ros2_autonomy/replay_autocross_4.html",
+   "sha256": "fb676882ae097b827c512e78c89a8b09903793d99709c4bb16a7384e05af4caf"
+  },
+  "replay_autocross_5.html": {
+   "path": "runs/ros2_autonomy/replay_autocross_5.html",
+   "sha256": "e13cef9a76f463758afc748a8afe79a142a29e6f2aa8a81e198f73afdcbc8dd8"
+  },
+  "replay_autocross_5_clutter.html": {
+   "path": "runs/ros2_autonomy/replay_autocross_5_clutter.html",
+   "sha256": "ff71f6f881b3c7a4291c795a8e6ad2416e1e23ea6927b6eaad4cc4ea6bb86638"
+  },
+  "replay_demo_0.html": {
+   "path": "runs/ros2_autonomy/replay_demo_0.html",
+   "sha256": "b6f8a29782d7e76afbdc49893e790cb9ca82d7454d31e906650b7ab6c06709c0"
+  },
+  "replay_inspection_a_0.html": {
+   "path": "runs/ros2_autonomy/replay_inspection_a_0.html",
+   "sha256": "b408e2dc10da66d2f450bef8c0734bd326fe28275c432d77c008d4b16704c95d"
+  },
+  "replay_inspection_b_0.html": {
+   "path": "runs/ros2_autonomy/replay_inspection_b_0.html",
+   "sha256": "3d8bd5e09b580cd656707f7f5a9bdc0b163fdd4f477c8eddb4f147dbe1e40535"
+  },
+  "replay_skidpad_0.html": {
+   "path": "runs/ros2_autonomy/replay_skidpad_0.html",
+   "sha256": "b9495eaab74565497010b957beb71708af1deef36adb1fee024a5f8481e5dd61"
+  },
+  "replay_trackdrive_1.html": {
+   "path": "runs/ros2_autonomy/replay_trackdrive_1.html",
+   "sha256": "9e727882c2bc6c663243f315597faccfb816fa6d29bd0a83fb18e1c637dd99e8"
+  },
+  "replay_trackdrive_3.html": {
+   "path": "runs/ros2_autonomy/replay_trackdrive_3.html",
+   "sha256": "fd5661a912774fdb8ff90971e64301a40da25592861193cb480cdb9e2c6a0c75"
+  },
+  "result_acceleration_0.json": {
+   "path": "runs/ros2_autonomy/result_acceleration_0.json",
+   "sha256": "118ad4c740497f1eac8db700fcf05506bc7b1bb5e617d82753fbf77bf2011cc6"
+  },
+  "result_autocross_1_clutter.json": {
+   "path": "runs/ros2_autonomy/result_autocross_1_clutter.json",
+   "sha256": "80e2fc7e1564ae408a0701708509b097841bf2338b1eac78ba7906bb7c6e69de"
+  },
+  "result_autocross_4.json": {
+   "path": "runs/ros2_autonomy/result_autocross_4.json",
+   "sha256": "a15be76c7dbe6b5755a2c7a53ae6600c0ba743e98380a6111daa3d03b5d50280"
+  },
+  "result_autocross_5.json": {
+   "path": "runs/ros2_autonomy/result_autocross_5.json",
+   "sha256": "179f9868c1e76e271b44831415afe13a4283dff4d660eb03308c0a26d51e49d1"
+  },
+  "result_autocross_5_clutter.json": {
+   "path": "runs/ros2_autonomy/result_autocross_5_clutter.json",
+   "sha256": "dd849078f34a49fe24487dce07bab48311032d54c87bd8a651f6c461c6f608e9"
+  },
+  "result_demo_0.json": {
+   "path": "runs/ros2_autonomy/result_demo_0.json",
+   "sha256": "d37d6d604426c24458fd725d74a5eb53a1a685bfaa79bcf539d339facd98eaf0"
+  },
+  "result_inspection_a_0.json": {
+   "path": "runs/ros2_autonomy/result_inspection_a_0.json",
+   "sha256": "18f589a06a920b67f93d404e4740ef5e022d12f97090b8ec833841f22d9935f5"
+  },
+  "result_inspection_b_0.json": {
+   "path": "runs/ros2_autonomy/result_inspection_b_0.json",
+   "sha256": "51e45484137d468374aafcebd94423e40f311e644356eaf2d748c47d5e001a14"
+  },
+  "result_skidpad_0.json": {
+   "path": "runs/ros2_autonomy/result_skidpad_0.json",
+   "sha256": "a1667ef371003c9d5d12d866b1c83e81542fe28b123169f8ec65211e46d9c4db"
+  },
+  "result_trackdrive_1.json": {
+   "path": "runs/ros2_autonomy/result_trackdrive_1.json",
+   "sha256": "9121c5616d2520929de70bf2b0010e818c89d3cac6768679b79bcf74474953e6"
+  },
+  "result_trackdrive_3.json": {
+   "path": "runs/ros2_autonomy/result_trackdrive_3.json",
+   "sha256": "87eee5701cff7a03d6102a0fbaf4c5e0d336d937424122e96463cbab1dd8e696"
+  }
+ },
+ "parameters": {
+  "bus": "sim (udp_multicast)",
+  "clock": "real time",
+  "launch": "fsai_ros autonomy_sim.launch.py"
+ },
+ "project": "fsai-open",
+ "run": "ros2_autonomy",
+ "utc_time": "2026-11-18T07:34:35Z",
+ "version": "0.2.0"
+}

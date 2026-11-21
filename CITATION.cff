@@ -1,0 +1,33 @@
+# fsai-open: citation metadata
+# Author: KEYUR SHAILESHKUMAR PATEL (ORCID https://orcid.org/0009-0008-5261-043X)
+# Conducted independently; not an official Brunel University London project.
+cff-version: 1.2.0
+message: "If you use fsai-open, please cite it as below."
+title: "fsai-open: open, tested driverless software for the IMechE FS-AI ADS-DV"
+type: software
+version: 0.2.0
+date-released: 2026-11-18
+license: MIT
+abstract: >-
+  Open, tested driverless software for the IMechE FS-AI ADS-DV. Stage 1: a DBC-checked CAN codec, a ROS 2
+  bridge with safety interlocks, a deterministic emulator of the VCU autonomous-system state machine and
+  conformance and pitfall test suites. Stage 2: a driving stack (LiDAR-camera cone perception, EKF-SLAM with
+  learned tyre slip, path and racing-line planning, latency-compensated control, every FS-AI 2026 event and
+  inspection mission, sensor-loss EBS), seeded rule-conformant tracks, simulated sensors with trackside
+  clutter, an outside referee, stress runs and real-time ROS 2 runs, all with SHA-256/Merkle provenance.
+  Synthetic-validated only. Drafted with an AI assistant (Claude, Anthropic); all design decisions by the author.
+keywords:
+  - Formula Student AI
+  - driverless
+  - CAN bus
+  - ROS 2
+  - SLAM
+  - autonomous racing
+  - verification
+  - reproducibility
+  - open science
+authors:
+  - given-names: "KEYUR SHAILESHKUMAR"
+    family-names: "PATEL"
+    orcid: "https://orcid.org/0009-0008-5261-043X"
+    affiliation: "MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK; Independent researcher"

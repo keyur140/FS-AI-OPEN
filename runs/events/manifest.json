@@ -1,0 +1,248 @@
+{
+ "ai_assistance": "Code and documents were drafted with an AI assistant (Claude, by Anthropic). Every design decision was made and approved by the author; every result comes from deterministic code and tests that anyone can re-run.",
+ "author": {
+  "affiliations": [
+   "MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK",
+   "Independent researcher"
+  ],
+  "family_names": "PATEL",
+  "given_names": "KEYUR SHAILESHKUMAR",
+  "name": "KEYUR SHAILESHKUMAR PATEL",
+  "note": "Conducted independently; not an official Brunel University London project.",
+  "orcid": "https://orcid.org/0009-0008-5261-043X"
+ },
+ "environment": {
+  "machine": "x86_64",
+  "packages": {
+   "can": "4.6.1",
+   "cantools": "45.2.0",
+   "msgpack": "1.2.4",
+   "pytest": "9.1.1",
+   "yaml": "6.0.3"
+  },
+  "platform": "Linux-6.18.44-fc-v595-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "ros_distro": "humble"
+ },
+ "evidence_level": "Synthetic-validated",
+ "inputs": {
+  "autonomy": {
+   "path": "config/autonomy.yaml",
+   "sha256": "36679d06bf0a8dd8670964d887d8c24cf321bce965c0e6a54bdb1428287ff0fb"
+  },
+  "params": {
+   "path": "config/ads_dv.yaml",
+   "sha256": "5016602c88ed2028cc39a9a8b161f9a1515436b67eed3561e8c4c408024e9f1c"
+  },
+  "tracks": {
+   "path": "config/tracks.yaml",
+   "sha256": "a4e490da549debb0659443bafa91883fdf03428f2a1a2f7b92dba910a115a5b8"
+  }
+ },
+ "notes": "Closed loop in simulated time: seeded track -> pretend LiDAR/camera/IMU -> driving stack -> bridge -> encoded CAN bytes -> VCU emulator with tyre model. Referee sees the true track; the stack never does.",
+ "outputs": {
+  "replay_acceleration_seed0": {
+   "path": "runs/events/replay_acceleration_seed0.html",
+   "sha256": "dd3740e1727ab2ad807dace1cba2b5a3ff4e7be8bdbb306e0e9092b7c3137e78"
+  },
+  "replay_autocross_seed0": {
+   "path": "runs/events/replay_autocross_seed0.html",
+   "sha256": "f07ea57604a0631ebe7168e0c32a4acc0181681d4212d2eccb8013bd1c29b2e6"
+  },
+  "replay_demo_seed0": {
+   "path": "runs/events/replay_demo_seed0.html",
+   "sha256": "24fde43e758eb1c1324ae2e5df06c0475208eeb6017fea2b297209fe9e6d5e09"
+  },
+  "replay_skidpad_seed0": {
+   "path": "runs/events/replay_skidpad_seed0.html",
+   "sha256": "99d9a14f09e228765562efdede2a14623dc0bc5896477270f560342eeae3c0ee"
+  },
+  "replay_trackdrive_seed1": {
+   "path": "runs/events/replay_trackdrive_seed1.html",
+   "sha256": "521297172f2b2c7a988806a4e9c2bcda5a33b7af99bd042a61c901a4d5d5d95e"
+  },
+  "results": {
+   "path": "runs/events/results.json",
+   "sha256": "9dc137a58dca5a3cf6b5b7fbe1ce273e14dbf675201cf41fe7fe15916fb60f0d"
+  },
+  "stress": {
+   "path": "runs/events/stress.json",
+   "sha256": "a7614a7d9a7deccfe7df0e67507b1462247087cd3cce90c83db378462ca535dd"
+  }
+ },
+ "parameters": {
+  "determinism_reruns": [
+   [
+    "acceleration",
+    0
+   ],
+   [
+    "skidpad",
+    0
+   ],
+   [
+    "autocross",
+    0
+   ],
+   [
+    "trackdrive",
+    3
+   ],
+   [
+    "demo",
+    0
+   ]
+  ],
+  "laps_required": {
+   "acceleration": 1,
+   "autocross": 1,
+   "skidpad": 4,
+   "trackdrive": 10
+  },
+  "stress": {
+   "actuator_delay_x3": {
+    "vehicle__brake_delay_s": 0.12,
+    "vehicle__drive_delay_s": 0.09,
+    "vehicle__steer_delay_s": 0.12
+   },
+   "baseline": {},
+   "bumpy_grip_15pct": {
+    "vehicle__tyre_mu_variation": 0.15
+   },
+   "camera_blind": {
+    "sensors__camera_false_per_frame": 0.0,
+    "sensors__camera_range_m": 0.0
+   },
+   "camera_colour_errors_x3": {
+    "sensors__camera_colour_error_far": 0.36,
+    "sensors__camera_colour_error_near": 0.03
+   },
+   "camera_phantoms_x5": {
+    "sensors__camera_false_per_frame": 1.5
+   },
+   "cold_tyres_grip_0p8": {
+    "vehicle__tyre_mu": 0.96
+   },
+   "delay_x3_no_compensation": {
+    "control__latency_comp_s": 0.0,
+    "vehicle__brake_delay_s": 0.12,
+    "vehicle__drive_delay_s": 0.09,
+    "vehicle__steer_delay_s": 0.12
+   },
+   "gyro_bias_1dps": {
+    "sensors__imu_yaw_rate_bias_dps": 1.0
+   },
+   "lidar_dropout_30pct": {
+    "sensors__lidar_dropout": 0.3
+   },
+   "lidar_noise_x3": {
+    "sensors__lidar_noise_m": 0.06
+   },
+   "real_world_mix": {
+    "sensors__clutter_level": 1.0,
+    "vehicle__brake_delay_s": 0.08,
+    "vehicle__drive_delay_s": 0.06,
+    "vehicle__steer_delay_s": 0.08,
+    "vehicle__steer_gain": 0.9,
+    "vehicle__tyre_mu": 1.08,
+    "vehicle__tyre_mu_variation": 0.1
+   },
+   "steer_gain_0p85": {
+    "vehicle__steer_gain": 0.85
+   },
+   "trackside_clutter": {
+    "sensors__clutter_level": 1.0
+   },
+   "wheel_speed_noise_x5": {
+    "sensors__wheel_speed_noise_frac": 0.05
+   }
+  },
+  "stress_seeds": [
+   0,
+   1,
+   2
+  ],
+  "suite": [
+   [
+    "inspection_a",
+    0
+   ],
+   [
+    "inspection_b",
+    0
+   ],
+   [
+    "demo",
+    0
+   ],
+   [
+    "demo",
+    1
+   ],
+   [
+    "acceleration",
+    0
+   ],
+   [
+    "acceleration",
+    1
+   ],
+   [
+    "acceleration",
+    2
+   ],
+   [
+    "skidpad",
+    0
+   ],
+   [
+    "skidpad",
+    1
+   ],
+   [
+    "skidpad",
+    2
+   ],
+   [
+    "autocross",
+    0
+   ],
+   [
+    "autocross",
+    1
+   ],
+   [
+    "autocross",
+    2
+   ],
+   [
+    "autocross",
+    3
+   ],
+   [
+    "autocross",
+    4
+   ],
+   [
+    "autocross",
+    5
+   ],
+   [
+    "trackdrive",
+    1
+   ],
+   [
+    "trackdrive",
+    3
+   ],
+   [
+    "trackdrive",
+    5
+   ]
+  ]
+ },
+ "project": "fsai-open",
+ "run": "events",
+ "utc_time": "2026-11-18T07:34:35Z",
+ "version": "0.2.0"
+}

@@ -1,0 +1,26 @@
+# Decisions
+
+Author: KEYUR SHAILESHKUMAR PATEL (ORCID https://orcid.org/0009-0008-5261-043X). Conducted independently; not an official Brunel University London project.
+
+Every decision below was made by the author. The AI assistant proposed options with a recommendation, and the author chose.
+
+| # | Date | Decision | Chosen by | Why |
+|---|---|---|---|---|
+| D1 | 2026-11-17 | Route: build the code and infrastructure and hand it to Brunel's FS-AI team as a student contribution; the team checks, tests and races it | Author | Contribute a ready solution; the team owns the car-side testing |
+| D2 | 2026-11-17 | Code-only deliverable sent as a finished zip; no team involvement during the build | Author | Simplest handover |
+| D3 | 2026-11-17 | Build the safety layer first (CAN bridge, VCU emulator, conformance tests) before the driving stack | Author, from the platform research report | Every DDT team needs this layer; the 2021 library has known defects |
+| D4 | 2026-11-17 | Plug-and-play delivery: one Docker image, `install.sh` + `run.sh` (and `run.ps1` for Windows) | Author | "Like installing a PWA" |
+| D5 | 2026-11-17 | Name `fsai-open`; MIT licence; layout and file header as previewed | Author | Approved preview |
+| D6 | 2026-11-17 | No email anywhere. ROS `package.xml` therefore has no maintainer email, and a documented workaround replaces it | Author (decision card) | Author's standing rule |
+| D7 | 2026-11-17 | Research question for the later preregistration: robustness. Sensors: camera + GPS-INS + LiDAR | Default recommendation, pending the author's tap | Recorded as provisional until confirmed |
+| D8 | 2026-11-17 | Order: synthetic run → one small exploratory real-data run → OSF preregistration → confirmatory study | Author (project instructions) | So the preregistration can be checked against reality first |
+| D9 | 2026-11-17 | No preregistration for fsai-open: it is a builders' solution for the team, not a study. D7 and D8 no longer apply; the empty `preregistration/` folder was removed | Author | "It's just solution help to them" |
+| D10 | 2026-11-17 | Build all the code first (stage 2 driving stack, stage 3 small real-data run), then write every document and PDF once at the end | Author | One consistent set of documents from the final code |
+| D11 | 2026-11-17 | Make it a "fully maxed and advanced" stack, judged as the FS-AI rules judge a run | Author | "We are just the builders" |
+| D12 | 2026-11-17 | The IMechE 2026 FS-AI Rules (uploaded by the author) win over the 2021 handbook and spec v4.0 where they differ; the strictest value is used (50 ms handshake, T1.1.8) | Author supplied the rules; strictest-value rule is the assistant's recommendation | The competition is judged on the current rules |
+| D13 | 2026-11-18 | Model the "sim vs asphalt" gap in the simulator and defend against it in the software: trackside clutter and heat shimmer, tyre grip changes and steering compliance, actuator dead time; plus a "Day 1 at a real track" tuning list | Author asked for it | The real car always differs from the simulator |
+| D14 | 2026-11-18 | "Drivetrain rpm" in Static Inspection A/B is read as wheel rpm, one setting to change (A13) | Assistant's reading, flagged for the scrutineer | The rules do not say which |
+| D15 | 2026-11-18 | Real-time robustness: perception, IMU and control on separate threads; scans older than `perception.max_scan_age_s` (0.4 s) are dropped, never used as new; sensor-latency correction uses dead reckoning only; one maths thread per process in the image | fsai-open (found in the real-time skidpad runs) | An old scan on the symmetric skidpad rings matched the wrong cones and turned the map; the driving node ran at 280% CPU with 0.3 s stalls until maths threads were capped |
+| D16 | 2026-11-18 | Racing line solved with L-BFGS-B (under 1 s instead of about 67 s) and built in a separate process in the real-time node (a planner thread starved perception and set off the sensor-loss EBS); on a frozen map with nothing matched for 0.3 s the pose search is widened before the 2 s lost-match EBS | fsai-open (found in the real-time trackdrive runs) | Measured on the desk with a 1 m pose jump: without widening, EBS with 23 cones hit; with it, all laps finished |
+| D17 | 2026-11-18 | Colour gate in data association (blue never matched to yellow); pose-search widening capped at 3 steps per lost spell; IMU gaps bridged with the steering-based yaw rate; sensor stamps from the emulator's own time; bridge frame-order guard (one empty 10 ms cycle between brake and torque) | fsai-open (found in real-time trackdrive runs) | A widened search on the frozen map matched the opposite edge and the car drove a whole lap 3.5 m off; a direct brake-to-torque switch gave a BRAKE_PLAUSIBILITY e-stop because drive frames reach the VCU before brake frames |
+| D18 | 2026-11-18 | A detection is never matched to a mapped cone more than 1.0 m away (slam.max_match_m), widened only while re-finding the map | fsai-open (found in the desk run of autocross seed 4) | The filter's own pose uncertainty grows to over a metre on a long first lap, so the statistical gate alone let a cone 2.2 m away count as the same cone; that single match moved the car and the map by 2 m and left 101 phantom cones |

@@ -1,0 +1,66 @@
+{
+ "ai_assistance": "Code and documents were drafted with an AI assistant (Claude, by Anthropic). Every design decision was made and approved by the author; every result comes from deterministic code and tests that anyone can re-run.",
+ "author": {
+  "affiliations": [
+   "MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK",
+   "Independent researcher"
+  ],
+  "family_names": "PATEL",
+  "given_names": "KEYUR SHAILESHKUMAR",
+  "name": "KEYUR SHAILESHKUMAR PATEL",
+  "note": "Conducted independently; not an official Brunel University London project.",
+  "orcid": "https://orcid.org/0009-0008-5261-043X"
+ },
+ "environment": {
+  "machine": "x86_64",
+  "packages": {
+   "can": "4.6.1",
+   "cantools": "45.2.0",
+   "msgpack": "1.2.4",
+   "pytest": "9.1.1",
+   "yaml": "6.0.3"
+  },
+  "platform": "Linux-6.18.44-fc-v595-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "ros_distro": "humble"
+ },
+ "evidence_level": "Synthetic-validated",
+ "inputs": {
+  "dbc_2021": {
+   "path": "third_party/dbc/ADSDV_2021_VCU_AI_interface_v2.dbc",
+   "sha256": "e6c1b88f0faa941f8c077a2529be7dc942f7038d776cada1e1d57c899866f9e0"
+  },
+  "dbc_2026": {
+   "path": "third_party/dbc/ADS-DV_2026_CAN1.dbc",
+   "sha256": "fdc895edde31f2b8f3c8638e3d341e05e231eb434e36a9311d65a4f243cd4a0a"
+  },
+  "params": {
+   "path": "config/ads_dv.yaml",
+   "sha256": "5016602c88ed2028cc39a9a8b161f9a1515436b67eed3561e8c4c408024e9f1c"
+  }
+ },
+ "notes": "",
+ "outputs": {
+  "junit": {
+   "path": "runs/tests/junit.xml",
+   "sha256": "2b515372cc90a749aecde378b9dadd45c8abbd91ee7510c50bccccb08e6cd8ab"
+  },
+  "output": {
+   "path": "runs/tests/pytest_output.txt",
+   "sha256": "4c4125cfc5c3ac4a3bb16c7cc33dfcbb07cabc1e28518d7b6f1f02de78f336fc"
+  },
+  "summary": {
+   "path": "runs/tests/summary.json",
+   "sha256": "c895c187680bd8d412d96d745bf9816ca0e39dd2f5046a61115daae6f414bd10"
+  }
+ },
+ "parameters": {
+  "command": "-m pytest -q -p no:cacheprovider --junitxml=/work/runs/tests/junit.xml tests",
+  "quick": false,
+  "seed": 20261117
+ },
+ "project": "fsai-open",
+ "run": "tests",
+ "utc_time": "2026-11-18T07:28:00Z",
+ "version": "0.2.0"
+}

@@ -1,0 +1,53 @@
+{
+ "distance_m": 86.7,
+ "final_status": {
+  "ami_state": "ACCELERATION",
+  "angle_max_deg": 24.0,
+  "as_state": "AS_FINISHED",
+  "brake_cmd_pct": 50.0,
+  "command_stale": false,
+  "direction": "FORWARD",
+  "estop_requested": false,
+  "faults": [],
+  "finish_requested": true,
+  "go_signal": 0,
+  "loop": {
+   "cycles": 1959,
+   "max_period_ms": 12.185,
+   "overruns": 0,
+   "p50_period_ms": 10.0,
+   "p99_period_ms": 10.706
+  },
+  "mission_status": "FINISHED",
+  "motor_speed_max_rpm": 0.0,
+  "notes": [],
+  "rejected_commands": 0,
+  "shutdown_cause": "NO_SHUTDOWN",
+  "speed_mps": 0.084,
+  "steer_cmd_deg": 0.0,
+  "t": 1207.870557278,
+  "torque_cap_nm": 195.0,
+  "torque_cmd_nm": 0.0
+ },
+ "max_speed_mps": 9.9,
+ "ok": true,
+ "timeline": [
+  [
+   0.13,
+   "AS_OFF"
+  ],
+  [
+   2.03,
+   "AS_READY"
+  ],
+  [
+   7.58,
+   "AS_DRIVING"
+  ],
+  [
+   19.68,
+   "AS_FINISHED"
+  ]
+ ],
+ "why": "AS_FINISHED with no faults"
+}

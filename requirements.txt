@@ -1,0 +1,16 @@
+# fsai-open: pinned Python dependencies (exact versions, so every install is the same)
+# Author: KEYUR SHAILESHKUMAR PATEL (ORCID https://orcid.org/0009-0008-5261-043X)
+# Affiliations: (1) MSc Artificial Intelligence student, Department of Computer Science,
+#   Brunel University London, UK; (2) Independent researcher
+# Conducted independently; not an official Brunel University London project.
+# Drafted with an AI assistant (Claude, Anthropic); design decisions by the author.
+python-can==4.6.1
+cantools==45.2.0
+msgpack==1.2.4
+PyYAML==6.0.3
+pytest==9.1.1
+# stage 2 driving stack. The Docker image (Python 3.10, ROS 2 Humble) uses numpy 1.26: ROS Humble's
+# compiled message code is built against numpy 1.x. Python 3.13 has no numpy 1.26 wheels, so it uses 2.2.
+numpy==1.26.4; python_version < "3.13"
+numpy==2.2.6; python_version >= "3.13"
+scipy==1.15.3

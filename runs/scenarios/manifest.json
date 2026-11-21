@@ -1,0 +1,49 @@
+{
+ "ai_assistance": "Code and documents were drafted with an AI assistant (Claude, by Anthropic). Every design decision was made and approved by the author; every result comes from deterministic code and tests that anyone can re-run.",
+ "author": {
+  "affiliations": [
+   "MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK",
+   "Independent researcher"
+  ],
+  "family_names": "PATEL",
+  "given_names": "KEYUR SHAILESHKUMAR",
+  "name": "KEYUR SHAILESHKUMAR PATEL",
+  "note": "Conducted independently; not an official Brunel University London project.",
+  "orcid": "https://orcid.org/0009-0008-5261-043X"
+ },
+ "environment": {
+  "machine": "x86_64",
+  "packages": {
+   "can": "4.6.1",
+   "cantools": "45.2.0",
+   "msgpack": "1.2.4",
+   "pytest": "9.1.1",
+   "yaml": "6.0.3"
+  },
+  "platform": "Linux-6.18.44-fc-v595-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "ros_distro": "humble"
+ },
+ "evidence_level": "Synthetic-validated",
+ "inputs": {
+  "params": {
+   "path": "config/ads_dv.yaml",
+   "sha256": "5016602c88ed2028cc39a9a8b161f9a1515436b67eed3561e8c4c408024e9f1c"
+  }
+ },
+ "notes": "Deterministic lockstep: bridge + VCU emulator exchange encoded CAN bytes in simulated time. Each scenario run twice; fingerprints must match.",
+ "outputs": {
+  "results": {
+   "path": "runs/scenarios/results.json",
+   "sha256": "d8c3f3e9a22c5d3712e8c053f6a3e24fefc13e3d360c8fcdff6c48184d368d59"
+  }
+ },
+ "parameters": {
+  "seed": 20261117,
+  "tick_s": 0.01
+ },
+ "project": "fsai-open",
+ "run": "scenarios",
+ "utc_time": "2026-11-18T07:28:05Z",
+ "version": "0.2.0"
+}

@@ -1,0 +1,24 @@
+# fsai-open: Python package build file
+# Author: KEYUR SHAILESHKUMAR PATEL (ORCID https://orcid.org/0009-0008-5261-043X)
+# Affiliations: (1) MSc Artificial Intelligence student, Department of Computer Science,
+#   Brunel University London, UK; (2) Independent researcher
+# Conducted independently; not an official Brunel University London project.
+# Drafted with an AI assistant (Claude, Anthropic); design decisions by the author.
+[build-system]
+requires = ["setuptools>=59"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fsai-open"
+version = "0.2.0"
+description = "Open, tested CAN bridge and VCU emulator for the IMechE FS-AI ADS-DV"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "KEYUR SHAILESHKUMAR PATEL"}]
+dependencies = ["python-can==4.6.1", "msgpack==1.2.4", "PyYAML==6.0.3", "numpy>=1.26,<2.3", "scipy==1.15.3"]
+
+[tool.setuptools]
+packages = ["fsai", "fsai.can", "fsai.vcu", "fsai.bridge", "fsai.reference", "fsai.autonomy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

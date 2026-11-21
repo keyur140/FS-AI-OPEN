@@ -1,0 +1,249 @@
+{
+ "all_pass": true,
+ "scenarios": [
+  {
+   "displacement_m": 96.43,
+   "events": [
+    [
+     0.01,
+     "AI_COMMS_LOST (handshake wait 1 cycles, missed ['0x510', '0x511', '0x512', '0x513', '0x514'])"
+    ],
+    [
+     0.02,
+     "AS_OFF -> AS_READY: TSMS+ASMS on, mission selected, EBS armed (spec 3.1)"
+    ],
+    [
+     5.13,
+     "AS_READY -> AS_DRIVING: GO rising edge after >=5 s with zero requests (spec 3.2)"
+    ],
+    [
+     17.08,
+     "AS_DRIVING -> AS_FINISHED: mission FINISHED at standstill (spec 3.3)"
+    ]
+   ],
+   "expected": "AS_FINISHED, no faults",
+   "max_speed_mps": 13.91,
+   "observed": "AS_FINISHED, no faults",
+   "pass": true,
+   "rerun_identical": true,
+   "scenario": "acceleration",
+   "sim_seconds": 17.13,
+   "spec_violations_by_bridge": [],
+   "trace_sha256": "2cbaa0cb509ec622ac9182a4a53aad798760e59c587bef3ac99683831b284743"
+  },
+  {
+   "displacement_m": 15.97,
+   "events": [
+    [
+     0.01,
+     "AI_COMMS_LOST (handshake wait 1 cycles, missed ['0x510', '0x511', '0x512', '0x513', '0x514'])"
+    ],
+    [
+     0.02,
+     "AS_OFF -> AS_READY: TSMS+ASMS on, mission selected, EBS armed (spec 3.1)"
+    ],
+    [
+     5.13,
+     "AS_READY -> AS_DRIVING: GO rising edge after >=5 s with zero requests (spec 3.2)"
+    ],
+    [
+     26.26,
+     "AS_DRIVING -> AS_FINISHED: mission FINISHED at standstill (spec 3.3)"
+    ]
+   ],
+   "expected": "AS_FINISHED, no faults",
+   "max_speed_mps": 4.94,
+   "observed": "AS_FINISHED, no faults",
+   "pass": true,
+   "rerun_identical": true,
+   "scenario": "skidpad",
+   "sim_seconds": 26.31,
+   "spec_violations_by_bridge": [],
+   "trace_sha256": "fed8fec373b5df371dc0c218746185f460954ae2e0e36df2ca911910d08ae8fe"
+  },
+  {
+   "displacement_m": 115.52,
+   "events": [
+    [
+     0.01,
+     "AI_COMMS_LOST (handshake wait 1 cycles, missed ['0x510', '0x511', '0x512', '0x513', '0x514'])"
+    ],
+    [
+     0.02,
+     "AS_OFF -> AS_READY: TSMS+ASMS on, mission selected, EBS armed (spec 3.1)"
+    ],
+    [
+     5.13,
+     "AS_READY -> AS_DRIVING: GO rising edge after >=5 s with zero requests (spec 3.2)"
+    ],
+    [
+     22.1,
+     "AS_DRIVING -> AS_FINISHED: mission FINISHED at standstill (spec 3.3)"
+    ]
+   ],
+   "expected": "AS_FINISHED, no faults",
+   "max_speed_mps": 8.91,
+   "observed": "AS_FINISHED, no faults",
+   "pass": true,
+   "rerun_identical": true,
+   "scenario": "trackdrive_slalom",
+   "sim_seconds": 22.15,
+   "spec_violations_by_bridge": [],
+   "trace_sha256": "4f8ba21ee5eaeea1e3c4f5893e29bbbf18c180d64cbb0e089e08ad3538ae7bfd"
+  },
+  {
+   "displacement_m": 18.02,
+   "events": [
+    [
+     0.01,
+     "AI_COMMS_LOST (handshake wait 1 cycles, missed ['0x510', '0x511', '0x512', '0x513', '0x514'])"
+    ],
+    [
+     0.02,
+     "AS_OFF -> AS_READY: TSMS+ASMS on, mission selected, EBS armed (spec 3.1)"
+    ],
+    [
+     5.13,
+     "AS_READY -> AS_DRIVING: GO rising edge after >=5 s with zero requests (spec 3.2)"
+    ],
+    [
+     11.05,
+     "AS_DRIVING -> AS_FINISHED: mission FINISHED at standstill (spec 3.3)"
+    ]
+   ],
+   "expected": "AS_FINISHED, no faults",
+   "max_speed_mps": 3.94,
+   "observed": "AS_FINISHED, no faults",
+   "pass": true,
+   "rerun_identical": true,
+   "scenario": "autonomous_demo",
+   "sim_seconds": 11.1,
+   "spec_violations_by_bridge": [],
+   "trace_sha256": "24addbc6f719bc6876c30c9ed50e4c9523ada25310ba92fca67d8e7d7c84fbba"
+  },
+  {
+   "displacement_m": 28.39,
+   "events": [
+    [
+     0.01,
+     "AI_COMMS_LOST (handshake wait 1 cycles, missed ['0x510', '0x511', '0x512', '0x513', '0x514'])"
+    ],
+    [
+     0.02,
+     "AS_OFF -> AS_READY: TSMS+ASMS on, mission selected, EBS armed (spec 3.1)"
+    ],
+    [
+     5.13,
+     "AS_READY -> AS_DRIVING: GO rising edge after >=5 s with zero requests (spec 3.2)"
+    ],
+    [
+     17.17,
+     "AS_DRIVING -> AS_FINISHED: mission FINISHED at standstill (spec 3.3)"
+    ]
+   ],
+   "expected": "AS_FINISHED, no faults",
+   "max_speed_mps": 8.93,
+   "observed": "AS_FINISHED, no faults",
+   "pass": true,
+   "rerun_identical": true,
+   "scenario": "stale_team_software",
+   "sim_seconds": 17.22,
+   "spec_violations_by_bridge": [],
+   "trace_sha256": "024f3fbf195b2821b7008a684c812e24055c2fe86f3fec9cd6011a0b02895c22"
+  },
+  {
+   "displacement_m": 5.7,
+   "events": [
+    [
+     0.01,
+     "AI_COMMS_LOST (handshake wait 1 cycles, missed ['0x510', '0x511', '0x512', '0x513', '0x514'])"
+    ],
+    [
+     0.02,
+     "AS_OFF -> AS_READY: TSMS+ASMS on, mission selected, EBS armed (spec 3.1)"
+    ],
+    [
+     5.13,
+     "AS_READY -> AS_DRIVING: GO rising edge after >=5 s with zero requests (spec 3.2)"
+    ],
+    [
+     7.19,
+     "AI_COMMS_LOST (handshake wait 5 cycles, missed ['0x510', '0x511', '0x512', '0x513', '0x514'])"
+    ],
+    [
+     7.19,
+     "AS_DRIVING -> AS_EMERGENCY_BRAKE: AI comms lost (spec 2.4)"
+    ]
+   ],
+   "expected": "AS_EMERGENCY_BRAKE, cause AI_COMMS_FAULT",
+   "max_speed_mps": 4.42,
+   "observed": "AS_EMERGENCY_BRAKE, cause AI_COMMS_FAULT",
+   "pass": true,
+   "rerun_identical": true,
+   "scenario": "ai_stall_150ms",
+   "sim_seconds": 10.18,
+   "spec_violations_by_bridge": [],
+   "trace_sha256": "77eaa77b1dec3fb5dc1c0a8af816d93f8f306c046dc409987f4681c3ac30a82b"
+  },
+  {
+   "displacement_m": 12.34,
+   "events": [
+    [
+     0.01,
+     "AI_COMMS_LOST (handshake wait 1 cycles, missed ['0x510', '0x511', '0x512', '0x513', '0x514'])"
+    ],
+    [
+     0.02,
+     "AS_OFF -> AS_READY: TSMS+ASMS on, mission selected, EBS armed (spec 3.1)"
+    ],
+    [
+     5.13,
+     "AS_READY -> AS_DRIVING: GO rising edge after >=5 s with zero requests (spec 3.2)"
+    ],
+    [
+     8.14,
+     "AS_DRIVING -> AS_EMERGENCY_BRAKE: shutdown circuit open (e-stop / RES / crash sensor)"
+    ]
+   ],
+   "expected": "AS_EMERGENCY_BRAKE, stopped",
+   "max_speed_mps": 6.66,
+   "observed": "AS_EMERGENCY_BRAKE, stopped",
+   "pass": true,
+   "rerun_identical": true,
+   "scenario": "res_estop",
+   "sim_seconds": 12.18,
+   "spec_violations_by_bridge": [],
+   "trace_sha256": "2b69dbaaf0538d881411de6bf30dc5bf3272e42be7ef2c0c3322e1e8decabddb"
+  },
+  {
+   "displacement_m": 12.43,
+   "events": [
+    [
+     0.01,
+     "AI_COMMS_LOST (handshake wait 1 cycles, missed ['0x510', '0x511', '0x512', '0x513', '0x514'])"
+    ],
+    [
+     0.02,
+     "AS_OFF -> AS_READY: TSMS+ASMS on, mission selected, EBS armed (spec 3.1)"
+    ],
+    [
+     5.13,
+     "AS_READY -> AS_DRIVING: GO rising edge after >=5 s with zero requests (spec 3.2)"
+    ],
+    [
+     8.15,
+     "AS_DRIVING -> AS_EMERGENCY_BRAKE: AI requested e-stop"
+    ]
+   ],
+   "expected": "AS_EMERGENCY_BRAKE, cause AI_COMPUTER_REQUEST",
+   "max_speed_mps": 6.68,
+   "observed": "AS_EMERGENCY_BRAKE, cause AI_COMPUTER_REQUEST",
+   "pass": true,
+   "rerun_identical": true,
+   "scenario": "team_estop",
+   "sim_seconds": 12.18,
+   "spec_violations_by_bridge": [],
+   "trace_sha256": "99c78cf1324d4d1e38f4dee172e74f5d291db6a3ce4755c91ae4dc245a833397"
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- fsai-open: ROS 2 package manifest. Author: KEYUR SHAILESHKUMAR PATEL (ORCID https://orcid.org/0009-0008-5261-043X).
+     Affiliations: (1) MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK;
+     (2) Independent researcher. Conducted independently; not an official Brunel University London project.
+     Drafted with an AI assistant (Claude, Anthropic); design decisions by the author. -->
+<package format="3">
+  <name>fsai_ros</name>
+  <version>0.2.0</version>
+  <description>ROS 2 nodes for fsai-open: ADS-DV CAN bridge, VCU emulator and demo driver.</description>
+  <maintainer>KEYUR SHAILESHKUMAR PATEL</maintainer>
+  <license>MIT</license>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+  <exec_depend>ackermann_msgs</exec_depend>
+  <exec_depend>diagnostic_msgs</exec_depend>
+  <test_depend>python3-pytest</test_depend>
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

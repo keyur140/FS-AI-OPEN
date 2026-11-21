@@ -1,0 +1,748 @@
+{
+ "conditions": {
+  "actuator_delay_x3": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    []
+   ],
+   "lap_times_s": [
+    59.88,
+    49.32,
+    55.76
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    0
+   ],
+   "max_lateral_m": [
+    0.248,
+    0.241,
+    0.287
+   ],
+   "official_times_s": [
+    59.88,
+    49.32,
+    55.76
+   ],
+   "overrides": {
+    "vehicle__brake_delay_s": 0.12,
+    "vehicle__drive_delay_s": 0.09,
+    "vehicle__steer_delay_s": 0.12
+   },
+   "passed": 3,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "baseline": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    []
+   ],
+   "lap_times_s": [
+    58.84,
+    49.9,
+    55.87
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    0
+   ],
+   "max_lateral_m": [
+    0.259,
+    0.289,
+    0.309
+   ],
+   "official_times_s": [
+    58.84,
+    49.9,
+    55.87
+   ],
+   "overrides": {},
+   "passed": 3,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "bumpy_grip_15pct": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    []
+   ],
+   "lap_times_s": [
+    58.44,
+    49.33,
+    56.08
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    0
+   ],
+   "max_lateral_m": [
+    0.261,
+    0.296,
+    0.293
+   ],
+   "official_times_s": [
+    58.44,
+    49.33,
+    56.08
+   ],
+   "overrides": {
+    "vehicle__tyre_mu_variation": 0.15
+   },
+   "passed": 3,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "camera_blind": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    []
+   ],
+   "lap_times_s": [
+    56.84,
+    47.63,
+    54.76
+   ],
+   "map_colour_accuracy": [
+    0.0138,
+    0.0159,
+    0.0142
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    0
+   ],
+   "max_lateral_m": [
+    0.264,
+    0.317,
+    0.313
+   ],
+   "official_times_s": [
+    56.84,
+    47.63,
+    54.76
+   ],
+   "overrides": {
+    "sensors__camera_false_per_frame": 0.0,
+    "sensors__camera_range_m": 0.0
+   },
+   "passed": 3,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "camera_colour_errors_x3": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    []
+   ],
+   "lap_times_s": [
+    59.13,
+    49.51,
+    55.88
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    0
+   ],
+   "max_lateral_m": [
+    0.258,
+    0.295,
+    0.306
+   ],
+   "official_times_s": [
+    59.13,
+    49.51,
+    55.88
+   ],
+   "overrides": {
+    "sensors__camera_colour_error_far": 0.36,
+    "sensors__camera_colour_error_near": 0.03
+   },
+   "passed": 3,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "camera_phantoms_x5": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    []
+   ],
+   "lap_times_s": [
+    58.64,
+    49.54,
+    55.72
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    0
+   ],
+   "max_lateral_m": [
+    0.255,
+    0.297,
+    0.312
+   ],
+   "official_times_s": [
+    58.64,
+    49.54,
+    55.72
+   ],
+   "overrides": {
+    "sensors__camera_false_per_frame": 1.5
+   },
+   "passed": 3,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "cold_tyres_grip_0p8": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    []
+   ],
+   "lap_times_s": [
+    58.83,
+    49.7,
+    56.05
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    0
+   ],
+   "max_lateral_m": [
+    0.245,
+    0.276,
+    0.301
+   ],
+   "official_times_s": [
+    58.83,
+    49.7,
+    56.05
+   ],
+   "overrides": {
+    "vehicle__tyre_mu": 0.96
+   },
+   "passed": 3,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "delay_x3_no_compensation": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    []
+   ],
+   "lap_times_s": [
+    58.16,
+    48.64,
+    55.32
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    0
+   ],
+   "max_lateral_m": [
+    0.255,
+    0.235,
+    0.267
+   ],
+   "official_times_s": [
+    58.16,
+    48.64,
+    55.32
+   ],
+   "overrides": {
+    "control__latency_comp_s": 0.0,
+    "vehicle__brake_delay_s": 0.12,
+    "vehicle__drive_delay_s": 0.09,
+    "vehicle__steer_delay_s": 0.12
+   },
+   "passed": 3,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "gyro_bias_1dps": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    []
+   ],
+   "lap_times_s": [
+    59.3,
+    49.09,
+    55.96
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    0
+   ],
+   "max_lateral_m": [
+    0.264,
+    0.291,
+    0.307
+   ],
+   "official_times_s": [
+    59.3,
+    49.09,
+    55.96
+   ],
+   "overrides": {
+    "sensors__imu_yaw_rate_bias_dps": 1.0
+   },
+   "passed": 3,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "lidar_dropout_30pct": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    []
+   ],
+   "lap_times_s": [
+    60.74,
+    51.2,
+    57.42
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    0
+   ],
+   "max_lateral_m": [
+    0.258,
+    0.292,
+    0.302
+   ],
+   "official_times_s": [
+    60.74,
+    51.2,
+    57.42
+   ],
+   "overrides": {
+    "sensors__lidar_dropout": 0.3
+   },
+   "passed": 3,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "lidar_noise_x3": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    []
+   ],
+   "lap_times_s": [
+    58.73,
+    49.24,
+    56.02
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    0
+   ],
+   "max_lateral_m": [
+    0.261,
+    0.292,
+    0.313
+   ],
+   "official_times_s": [
+    58.73,
+    49.24,
+    56.02
+   ],
+   "overrides": {
+    "sensors__lidar_noise_m": 0.06
+   },
+   "passed": 3,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "real_world_mix": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    [
+     "1 phantom cones in the map"
+    ]
+   ],
+   "lap_times_s": [
+    58.79,
+    49.51,
+    55.75
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    1
+   ],
+   "max_lateral_m": [
+    0.22,
+    0.262,
+    0.28
+   ],
+   "official_times_s": [
+    58.79,
+    49.51,
+    55.75
+   ],
+   "overrides": {
+    "sensors__clutter_level": 1.0,
+    "vehicle__brake_delay_s": 0.08,
+    "vehicle__drive_delay_s": 0.06,
+    "vehicle__steer_delay_s": 0.08,
+    "vehicle__steer_gain": 0.9,
+    "vehicle__tyre_mu": 1.08,
+    "vehicle__tyre_mu_variation": 0.1
+   },
+   "passed": 2,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "steer_gain_0p85": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    []
+   ],
+   "lap_times_s": [
+    58.93,
+    49.69,
+    55.73
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    0
+   ],
+   "max_lateral_m": [
+    0.237,
+    0.363,
+    0.369
+   ],
+   "official_times_s": [
+    58.93,
+    49.69,
+    55.73
+   ],
+   "overrides": {
+    "vehicle__steer_gain": 0.85
+   },
+   "passed": 3,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "trackside_clutter": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [
+     "1 phantom cones in the map"
+    ],
+    [],
+    [
+     "1 phantom cones in the map"
+    ]
+   ],
+   "lap_times_s": [
+    58.64,
+    49.66,
+    55.95
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    1,
+    0,
+    1
+   ],
+   "max_lateral_m": [
+    0.255,
+    0.292,
+    0.31
+   ],
+   "official_times_s": [
+    58.64,
+    49.66,
+    55.95
+   ],
+   "overrides": {
+    "sensors__clutter_level": 1.0
+   },
+   "passed": 1,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  },
+  "wheel_speed_noise_x5": {
+   "cones_hit": [
+    0,
+    0,
+    0
+   ],
+   "event": "autocross",
+   "fail_reasons": [
+    [],
+    [],
+    []
+   ],
+   "lap_times_s": [
+    58.63,
+    49.4,
+    56.37
+   ],
+   "map_colour_accuracy": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "map_false_cones": [
+    0,
+    0,
+    0
+   ],
+   "max_lateral_m": [
+    0.267,
+    0.288,
+    0.309
+   ],
+   "official_times_s": [
+    58.63,
+    49.4,
+    56.37
+   ],
+   "overrides": {
+    "sensors__wheel_speed_noise_frac": 0.05
+   },
+   "passed": 3,
+   "runs": 3,
+   "seeds": [
+    0,
+    1,
+    2
+   ]
+  }
+ },
+ "event": "autocross",
+ "seconds": 213.7,
+ "seeds": [
+  0,
+  1,
+  2
+ ]
+}

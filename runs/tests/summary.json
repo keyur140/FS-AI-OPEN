@@ -1,0 +1,1177 @@
+{
+ "cases": [
+  {
+   "id": "tests.autonomy.test_closed_loop::test_autocross_end_of_lap_does_not_drag_the_map",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 16.48
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_acceleration_finishes_inside_the_stop_area",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 3.233
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_skidpad_four_laps_then_exit",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 11.81
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_autocross_one_lap_and_a_correct_map[5]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 10.942
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_autocross_one_lap_and_a_correct_map[7]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 15.594
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_same_seed_same_run_byte_for_byte",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 9.225
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_referee_sees_a_bad_driver",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 9.325
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_res_emergency_stop_mid_run_is_clean",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 2.889
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_blind_camera_still_finishes_on_lidar_alone",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 11.538
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_inspection_and_demo_missions_meet_every_step_of_the_rules[inspection_a]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 4.766
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_inspection_and_demo_missions_meet_every_step_of_the_rules[inspection_b]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.768
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_inspection_and_demo_missions_meet_every_step_of_the_rules[demo]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 4.907
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_lifted_car_does_not_move_during_static_inspection",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 4.462
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_lost_lidar_and_camera_mid_run_requests_the_ebs",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 1.99
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_lost_imu_alone_requests_the_ebs",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 1.57
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_trackside_clutter_people_barriers_grass_and_shimmer",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 17.369
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_slower_actuators_and_less_grip_still_finish_clean",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 10.531
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_late_scans_on_the_symmetric_skidpad_rings_stay_clean",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 11.448
+  },
+  {
+   "id": "tests.autonomy.test_closed_loop::test_a_sudden_pose_jump_on_the_frozen_map_is_recovered_not_lost",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 78.319
+  },
+  {
+   "id": "tests.autonomy.test_perception::test_lidar_finds_cones_to_25_m_within_10_cm",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.027
+  },
+  {
+   "id": "tests.autonomy.test_perception::test_lidar_height_tells_big_orange_from_small",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.027
+  },
+  {
+   "id": "tests.autonomy.test_perception::test_ground_fit_recovers_a_tilted_plane",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.006
+  },
+  {
+   "id": "tests.autonomy.test_perception::test_no_points_no_cones_and_ground_only_no_cones",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.02
+  },
+  {
+   "id": "tests.autonomy.test_perception::test_fusion_takes_colour_from_camera_and_keeps_lidar_position",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_perception::test_camera_errors_grow_with_distance",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.094
+  },
+  {
+   "id": "tests.autonomy.test_perception::test_people_barriers_and_grass_near_the_car_are_not_cones",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.127
+  },
+  {
+   "id": "tests.autonomy.test_perception::test_lidar_only_blobs_need_the_camera_while_it_works",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.032
+  },
+  {
+   "id": "tests.autonomy.test_planning_control::test_local_path_runs_down_the_middle_of_a_straight",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.autonomy.test_planning_control::test_local_path_turns_the_right_way_and_respects_colours",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.146
+  },
+  {
+   "id": "tests.autonomy.test_planning_control::test_local_path_swapped_colours_is_penalised",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.003
+  },
+  {
+   "id": "tests.autonomy.test_planning_control::test_one_colour_only_falls_back_to_offset",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_planning_control::test_racing_line_stays_inside_the_cones_and_is_shorter_and_straighter",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 1.271
+  },
+  {
+   "id": "tests.autonomy.test_planning_control::test_racing_line_is_fast_enough_to_build_on_the_car",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 1.268
+  },
+  {
+   "id": "tests.autonomy.test_planning_control::test_racing_line_on_its_own_thread_does_not_stop_the_car",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 13.684
+  },
+  {
+   "id": "tests.autonomy.test_planning_control::test_speed_profile_respects_lateral_and_braking_limits",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.072
+  },
+  {
+   "id": "tests.autonomy.test_planning_control::test_pure_pursuit_steady_circle_matches_bicycle_geometry",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_planning_control::test_emulator_steering_waits_for_its_dead_time",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.22
+  },
+  {
+   "id": "tests.autonomy.test_planning_control::test_latency_compensation_steers_for_the_future_pose",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.027
+  },
+  {
+   "id": "tests.autonomy.test_planning_control::test_sensor_latency_shift_moves_a_late_scan_to_the_pose_of_now",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.075
+  },
+  {
+   "id": "tests.autonomy.test_planning_control::test_settings_survive_pickling_for_the_planner_process",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "tests.autonomy.test_slam::test_map_matches_truth_and_pose_is_accurate",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.141
+  },
+  {
+   "id": "tests.autonomy.test_slam::test_phantom_cones_are_pruned",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.206
+  },
+  {
+   "id": "tests.autonomy.test_slam::test_gyro_bias_is_learned",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.185
+  },
+  {
+   "id": "tests.autonomy.test_slam::test_without_cones_the_pose_drifts_with_the_bias",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.042
+  },
+  {
+   "id": "tests.autonomy.test_slam::test_freeze_keeps_only_confirmed_and_stops_growing",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.102
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[0-acceleration]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.005
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[0-skidpad]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.004
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[0-autocross]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.165
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[0-trackdrive]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.12
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[1-acceleration]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[1-skidpad]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[1-autocross]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.044
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[1-trackdrive]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.042
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[2-acceleration]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[2-skidpad]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[2-autocross]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.108
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[2-trackdrive]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.115
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[3-acceleration]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[3-skidpad]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[3-autocross]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.043
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[3-trackdrive]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.041
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[4-acceleration]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[4-skidpad]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[4-autocross]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.107
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[4-trackdrive]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.097
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[5-acceleration]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[5-skidpad]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[5-autocross]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.053
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[5-trackdrive]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.053
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[6-acceleration]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[6-skidpad]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[6-autocross]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.161
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[6-trackdrive]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.162
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[7-acceleration]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[7-skidpad]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[7-autocross]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.058
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[7-trackdrive]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.069
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[8-acceleration]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[8-skidpad]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[8-autocross]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.233
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[8-trackdrive]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.146
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[9-acceleration]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[9-skidpad]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[9-autocross]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.057
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[9-trackdrive]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.06
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[10-acceleration]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[10-skidpad]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[10-autocross]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.115
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[10-trackdrive]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.129
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[11-acceleration]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[11-skidpad]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[11-autocross]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.055
+  },
+  {
+   "id": "tests.autonomy.test_track::test_every_generated_track_is_valid[11-trackdrive]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.059
+  },
+  {
+   "id": "tests.autonomy.test_track::test_same_seed_same_track_and_different_seed_differs[acceleration]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.004
+  },
+  {
+   "id": "tests.autonomy.test_track::test_same_seed_same_track_and_different_seed_differs[skidpad]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.autonomy.test_track::test_same_seed_same_track_and_different_seed_differs[autocross]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.206
+  },
+  {
+   "id": "tests.autonomy.test_track::test_same_seed_same_track_and_different_seed_differs[trackdrive]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.208
+  },
+  {
+   "id": "tests.autonomy.test_track::test_ds26_colours_blue_left_yellow_right_on_circuits",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.108
+  },
+  {
+   "id": "tests.autonomy.test_track::test_validator_catches_a_wrong_side_cone_and_a_big_gap",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.116
+  },
+  {
+   "id": "tests.autonomy.test_track::test_skidpad_geometry_matches_fsai_2026_rules",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_track::test_acceleration_length_and_start_clear_of_the_car",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.autonomy.test_track::test_trackdrive_minimum_radius_and_length",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.427
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p1_2021_library_silently_zeroes_commands_before_first_get",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p1_fsai_open_never_zeroes_silently",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p2_official_2026_dbc_decodes_set_flags_as_minus_one",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.055
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p3_steer_limit_is_taken_live_from_vcu[21.0]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.208
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p3_steer_limit_is_taken_live_from_vcu[24.0]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.181
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p3_steer_limit_is_taken_live_from_vcu[27.2]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.207
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p3_steer_limit_is_taken_live_from_vcu[30.0]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.154
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p4_torque_derate_is_explicit_and_matches_2021_table[0-195.0]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p4_torque_derate_is_explicit_and_matches_2021_table[300-195.0]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p4_torque_derate_is_explicit_and_matches_2021_table[301-150.0]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p4_torque_derate_is_explicit_and_matches_2021_table[401-120.0]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p4_torque_derate_is_explicit_and_matches_2021_table[501-100.0]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p4_torque_derate_is_explicit_and_matches_2021_table[601-85.0]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p4_torque_derate_is_explicit_and_matches_2021_table[701-50.0]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p4_torque_derate_is_explicit_and_matches_2021_table[1000-50.0]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p4_derate_can_be_switched_off_by_the_team",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.01
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p5_2021_library_forces_identical_axles_and_hides_the_brake_override",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p5_fsai_open_reports_interlock_and_respects_driven_axles",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.012
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p6_every_fault_bit_and_shutdown_cause_is_exposed[HVIL_OPEN_FAULT-2-HVIL_OPEN_FAULT]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p6_every_fault_bit_and_shutdown_cause_is_exposed[EBS_FAULT-4-EBS_FAULT]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p6_every_fault_bit_and_shutdown_cause_is_exposed[AI_COMMS_LOST-6-AI_COMMS_FAULT]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p6_every_fault_bit_and_shutdown_cause_is_exposed[BRAKE_PLAUSIBILITY_FAULT-11-BRAKE_PLAUSIBILITY_FAULT]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p6_every_fault_bit_and_shutdown_cause_is_exposed[BMS_FAULT-10-BMS_FAULT]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p6_every_fault_bit_and_shutdown_cause_is_exposed[MISSION_STATUS_FAULT-8-MISSION_STATUS_FAULT]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p7_fsg_logging_fields_are_populated",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.147
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p8_dbc_is_pinned_by_commit_and_hash_and_uses_the_2026_name",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p9_hil_brake_quirk_is_modelled_but_off_by_default",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.293
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_p10_runner_uses_monotonic_clock_and_has_no_send_gate",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_stale_command_brakes_to_a_stop_without_estop",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.251
+  },
+  {
+   "id": "tests.conformance.test_pitfalls::test_nan_and_infinite_commands_are_rejected",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_3_bridge_never_transmits_on_reserved_ids",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.143
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_3_transmit_guard_refuses_reserved_ids",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_handshake_survives_60s_with_jitter_below_the_limit",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 1.05
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_ai_comms_lost_after_the_timeout[2-False-5]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.148
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_ai_comms_lost_after_the_timeout[2-False-10]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.149
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_ai_comms_lost_after_the_timeout[1-False-5]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.133
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_ai_comms_lost_after_the_timeout[1-False-10]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.117
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_ai_comms_lost_after_the_timeout[0-True-5]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.112
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_ai_comms_lost_after_the_timeout[0-True-10]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.108
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_ai_comms_lost_after_the_timeout[-15-True-5]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.108
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_ai_comms_lost_after_the_timeout[-15-True-10]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.109
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_any_single_ai_frame_missing_triggers_comms_lost[1296]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.098
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_any_single_ai_frame_missing_triggers_comms_lost[1297]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.128
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_any_single_ai_frame_missing_triggers_comms_lost[1298]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.093
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_any_single_ai_frame_missing_triggers_comms_lost[1299]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.108
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_any_single_ai_frame_missing_triggers_comms_lost[1300]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.096
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_2_4_handshake_not_echoed_triggers_comms_lost",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.096
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_1_ready_needs_all_four_conditions[tsms]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.053
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_1_ready_needs_all_four_conditions[asms]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.054
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_1_ready_needs_all_four_conditions[ami]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.05
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_1_ready_needs_all_four_conditions[ebs_armed]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.054
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_1_bridge_confirms_mission_selected",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.003
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_1_strict_ack_variant_reaches_ready_with_bridge",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.014
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_2_bridge_sends_only_zero_requests_and_neutral_in_ready",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.055
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_2_go_before_5s_is_ignored_and_must_be_cycled",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.128
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_2_go_already_on_when_entering_ready_must_be_cycled",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.119
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_2_emulator_blocks_driving_unless_requests_are_zero[STEER_REQUEST-3.0-1299]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.102
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_2_emulator_blocks_driving_unless_requests_are_zero[REAR_AXLE_TRQ_REQUEST-10.0-1298]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.102
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_2_emulator_blocks_driving_unless_requests_are_zero[FRONT_AXLE_TRQ_REQUEST-10.0-1297]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.102
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_2_emulator_blocks_driving_unless_requests_are_zero[DIRECTION_REQUEST-1-1296]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.127
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_2_emulator_blocks_driving_if_wheels_steered_over_5_degrees",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.098
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_2_go_signal_reported_to_ai",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.088
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_3_bridge_brakes_to_standstill_then_reports_finished",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.297
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_3_finished_state_ignores_drive_and_steer",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.17
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_4_finished_to_off_when_asms_off",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.1
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_6_ready_to_off_when_asms_off",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_5_3_7_3_8_shutdown_circuit_open_triggers_ebrake[ready]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_5_3_7_3_8_shutdown_circuit_open_triggers_ebrake[driving]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.133
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_5_3_7_3_8_shutdown_circuit_open_triggers_ebrake[finished]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.134
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_7_go_or_asms_off_while_driving_triggers_ebrake[res_go]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.103
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_7_go_or_asms_off_while_driving_triggers_ebrake[asms]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.105
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_7_ai_estop_request_end_to_end",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.132
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_3_9_ebrake_holds_15s_then_off_and_needs_power_cycle",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.382
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_4_emulator_mission_status_fault_finished_while_moving",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.124
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_4_emulator_autonomous_braking_fault_neutral_while_moving",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.13
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_4_emulator_brake_plausibility_fault",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.102
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_4_switching_brake_to_torque_passes_through_one_empty_cycle",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.129
+  },
+  {
+   "id": "tests.conformance.test_spec_v4::test_4_bridge_never_breaks_a_fault_rule_under_10000_random_commands",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 2.1
+  },
+  {
+   "id": "tests.realtime.test_realtime::test_realtime_full_mission_over_python_can_virtual_bus",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 13.354
+  },
+  {
+   "id": "tests.realtime.test_realtime::test_realtime_full_mission_over_udp_multicast_bus",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 10.356
+  },
+  {
+   "id": "tests.unit.test_codec_vs_dbc::test_layout_matches_official_dbc[2021]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.011
+  },
+  {
+   "id": "tests.unit.test_codec_vs_dbc::test_layout_matches_official_dbc[2026]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.unit.test_codec_vs_dbc::test_random_round_trip_agrees_with_cantools",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.301
+  },
+  {
+   "id": "tests.unit.test_known_answers::test_known_answer_encoding[msg0-values0-7b00]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "tests.unit.test_known_answers::test_known_answer_encoding[msg1-values1-85ff]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "tests.unit.test_known_answers::test_known_answer_encoding[msg2-values2-9e07a00f]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "tests.unit.test_known_answers::test_known_answer_encoding[msg3-values3-c801]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "tests.unit.test_known_answers::test_known_answer_encoding[msg4-values4-0160030000000000]",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "tests.unit.test_known_answers::test_out_of_range_values_raise_instead_of_changing",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "tests.unit.test_known_answers::test_two_runs_are_byte_identical",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 1.497
+  },
+  {
+   "id": "tests.unit.test_known_answers::test_observer_and_emulator_catch_a_bridge_without_interlocks",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.167
+  },
+  {
+   "id": "tests.unit.test_known_answers::test_observer_catches_finished_while_moving",
+   "outcome": "passed",
+   "reason": "",
+   "seconds": 0.145
+  }
+ ],
+ "counts": {
+  "error": 0,
+  "failed": 0,
+  "passed": 194,
+  "skipped": 0
+ },
+ "exit_code": 0,
+ "seconds": 285.2,
+ "total": 194
+}

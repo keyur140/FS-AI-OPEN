@@ -1,0 +1,64 @@
+# fsai-open: ADS-DV parameters, one source per value
+# Author: KEYUR SHAILESHKUMAR PATEL (ORCID https://orcid.org/0009-0008-5261-043X)
+# Affiliations: (1) MSc Artificial Intelligence student, Department of Computer Science,
+#   Brunel University London, UK; (2) Independent researcher
+# Conducted independently; not an official Brunel University London project.
+# Drafted with an AI assistant (Claude, Anthropic); design decisions by the author.
+#
+# Plain words: the numbers that describe the car. "status: estimate" means nobody has published
+# the real value; the team should measure it and change it here. Nothing else in the code hard-codes them.
+#
+# Sources:
+#   SPEC4  = ADS-DV Software Interface Specification v4.0 (Hypermotive, 2021)
+#   SPEC26 = FS-AI ADS-DV Specifications & Dimensions.md v1.0 (2026-04-04), FS-AI_ADS-DV_Documentation @ bb8f162
+#   DBC26  = ADS-DV_2026_CAN1.dbc @ bb8f162
+#   API21  = FS-AI_API fs-ai_api.c @ 33bcb61 (MIT)
+#   HIL    = FS-AI_IMechE_ADS-DV_HiL README (known issues)
+
+vehicle:
+  wheelbase_m:            {value: 1.530,  source: SPEC26}
+  track_m:                {value: 1.200,  source: SPEC26}
+  wheel_radius_m:         {value: 0.2664, source: "SPEC26 tyre 225/45 R13: (13*25.4 + 2*0.45*225)/2 mm"}
+  belt_ratio:             {value: 3.5,    source: "SPEC26 (3.5:1); API21 MOTOR_RATIO"}
+  motor_speed_max_rpm:    {value: 4000,   source: "SPEC26; SPEC4 range"}
+  axle_torque_max_nm:     {value: 195.0,  source: "SPEC4 / DBC26 range"}
+  electrical_power_max_w: {value: 5000,   source: SPEC26}
+  driven_axles:           {value: [rear], source: "SPEC26 'RWD, open diff'; front-axle frames may be vestigial (unconfirmed)"}
+  mass_kg:                {value: 300.0,  source: "estimate - not published", status: estimate}
+  rolling_resistance:     {value: 0.015,  source: "estimate", status: estimate}
+  drag_area_cda_m2:       {value: 0.9,    source: "estimate", status: estimate}
+  brake_decel_at_100pct_mps2: {value: 9.0, source: "estimate", status: estimate}
+  ebs_decel_mps2:         {value: 8.0,    source: "estimate", status: estimate}
+  steer_rate_deg_s:       {value: 60.0,   source: "estimate", status: estimate}
+  wheel_pulses_per_rev:   {value: 20,     source: "estimate - not published", status: estimate}
+  overall_width_m:        {value: 1.430,  source: SPEC26}
+  overall_length_m:       {value: 2.815,  source: SPEC26}
+  rear_overhang_m:        {value: 0.64,   source: "estimate: (2.815 - 1.530) / 2, overhangs assumed equal", status: estimate}
+  model:                  {value: dynamic, source: "fsai-open choice: 'dynamic' (tyres can slide) or 'kinematic' (no slip)"}
+  dynamic_above_mps:      {value: 3.0,    source: "fsai-open choice: below this the kinematic model is used (tyre models are unstable near 0)"}
+  cg_from_rear_frac:      {value: 0.5,    source: "estimate - not published", status: estimate}
+  yaw_inertia_kgm2:       {value: 180.0,  source: "estimate: about mass x (wheelbase/2)^2", status: estimate}
+  tyre_mu:                {value: 1.2,    source: "estimate for a road-legal semi-slick (Toyo R888R, SPEC26) on dry tarmac", status: estimate}
+  tyre_b:                 {value: 10.0,   source: "estimate: simplified Pacejka stiffness factor", status: estimate}
+  tyre_c:                 {value: 1.3,    source: "estimate: simplified Pacejka shape factor", status: estimate}
+  # Real-world effects (README "Sim vs asphalt"): measure these on the first test day and set them here
+  tyre_mu_variation:      {value: 0.0,    source: "fsai-open choice: +/- share of grip that changes over the track (bumps, patches, tyre temperature); stress runs use 0.15", status: tune}
+  steer_gain:             {value: 1.0,    source: "fsai-open choice: road wheels turn this share of the requested angle (compliance, bumps); stress runs use 0.85", status: tune}
+  steer_delay_s:          {value: 0.04,   source: "estimate: dead time from the steering request on CAN to the motor starting to move (on top of steer_rate_deg_s)", status: estimate}
+  drive_delay_s:          {value: 0.03,   source: "estimate: dead time from torque request to torque at the wheels", status: estimate}
+  brake_delay_s:          {value: 0.04,   source: "estimate: dead time from brake request to hydraulic pressure (on top of the 0.2-per-cycle pressure build-up)", status: estimate}
+
+vcu:
+  angle_max_deg:          {value: 24.0,   source: "SPEC4 v3.0 log says 24; SPEC4 tables 21; DBC26/HIL 30. Read live from ANGLE_MAX; tests sweep 21, 24, 27.2, 30"}
+  ready_min_s:            {value: 5.0,    source: "SPEC4 3.2 - confirm on car (2021 value)", status: confirm}
+  comms_timeout_cycles:   {value: 5,      source: "FSAI26 T1.1.8 - answer within 50 ms (SPEC4 2.4 says 100 ms; strictest used)", status: confirm}
+  ebrake_hold_s:          {value: 15.0,   source: "SPEC4 3.9", status: confirm}
+  standstill_rpm:         {value: 10,     source: "SPEC4 section 4"}
+  ready_max_actual_steer_deg: {value: 5.0, source: "SPEC4 3.2"}
+  require_selected_ack:   {value: false,  source: "SPEC4 3.1 lists 4 conditions; MISSION_STATUS=SELECTED is 'should'. Set true to be strict"}
+  hil_brake_estop_quirk:  {value: false,  source: "HIL: CarMaker HiL e-stops on any hydraulic brake request; the real car does not. true = imitate HiL"}
+
+bridge:
+  torque_power_derate:    {value: true,   source: "API21 L738-754: 150/120/100/85/50 Nm above 300/400/500/600/700 wheel rpm"}
+  finish_brake_pct:       {value: 50.0,   source: "fsai-open choice"}
+  command_timeout_s:      {value: 0.2,    source: "fsai-open choice: stale team command -> controlled brake, never e-stop"}
